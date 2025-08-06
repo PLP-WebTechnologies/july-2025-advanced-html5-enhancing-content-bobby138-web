@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+  <header>
+    <h1>Event Registration</h1>
+    <p>Please complete the form below to register for the upcoming conference. All fields marked with * are required.</p>
+  </header>
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <section>
+        <h2>Personal Details</h2>
+        <fieldset>
+          <legend>Contact Info</legend>
+          <label>
+            Full Name*: 
+            <input type="text" name="fullname" placeholder="Your full name" required autocomplete="name">
+          </label>
+          <label>
+            Email*: 
+            <input type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          </label>
+          <label>
+            Phone Number:
+            <input type="tel" name="phone" placeholder="0712345678" pattern="^\+?\d{7,15}$" autocomplete="tel">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Credentials</legend>
+          <label>
+            Username*: 
+            <input type="text" name="username" placeholder="Choose a username" required autocomplete="username">
+          </label>
+          <label>
+            Password*: 
+            <input type="password" name="password" required minlength="6" autocomplete="new-password">
+          </label>
+          <label>
+            Confirm Password*: 
+            <input type="password" name="confirm_password" required minlength="6" autocomplete="new-password">
+          </label>
+        </fieldset>
+      </section>
+      <section>
+        <h2>Event Preferences</h2>
+        <fieldset>
+          <legend>Select Options</legend>
+          <label>
+            Number of Guests:
+            <input type="number" name="guests" min="0" max="5" value="0">
+          </label>
+          <label>
+            Preferred Conference Date*:
+            <input type="date" name="conf_date" required>
+          </label>
+        </fieldset>
+      </section>
+      <section>
+        <h2>Additional Information</h2>
+        <fieldset>
+          <legend>Consent and Feedback</legend>
+          <label>
+            <input type="checkbox" name="newsletter" checked> Subscribe to newsletter
+          </label>
+          <fieldset>
+            <legend>Dietary Preferences</legend>
+            <label><input type="radio" name="diet" value="none" checked> No preference</label>
+            <label><input type="radio" name="diet" value="vegetarian"> Vegetarian</label>
+            <label><input type="radio" name="diet" value="vegan"> Vegan</label>
+            <label><input type="radio" name="diet" value="halal"> Halal</label>
+          </fieldset>
+          <label>
+            Upload Profile Photo:
+            <input type="file" name="photo" accept="image/*">
+          </label>
+          <label>
+            Why are you attending?:
+            <textarea name="motivation" rows="4" placeholder="Tell us in a few sentences…"></textarea>
+          </label>
+        </fieldset>
+      </section>
+      <section>
+        <h2>Review Submission</h2>
+        <table>
+          <thead>
+            <tr><th>Field</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Username</td><td><input type="text" name="review_username" readonly value=""></td></tr>
+            <tr><td>Full Name</td><td><input type="text" name="review_fullname" readonly value=""></td></tr>
+          </tbody>
+        </table>
+        <p>(The above cells could be populated via server‑side template to preview before submit.)</p>
+      </section>
+      <section>
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Reset Form</button>
+      </section>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 Conference Organizer. <a href="#privacy">Privacy Policy</a>.</p>
+  </footer>
+</body>
+</html>
